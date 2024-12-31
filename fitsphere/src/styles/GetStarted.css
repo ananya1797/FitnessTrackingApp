@@ -1,0 +1,67 @@
+/* Full-screen background container */
+.background-container {
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    background-image: url("../images/getstarted.png"); /* Your image path */
+    background-size: cover; /* Make the image cover the screen */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* No repeating of the image */
+    display: flex; /* Flexbox for centering */
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    position: relative; /* For positioning the overlay */
+  }
+  
+  /* Adding a semi-opaque overlay */
+  .background-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3); /* Black with 30% opacity */
+    z-index: 1; /* Ensures the overlay is on top of the background image but behind the content */
+  }
+  
+  /* Content container */
+  .content {
+    text-align: center; /* Center-align text and button */
+    background-color: rgba(255, 255, 255, 0.8); /* Light translucent background for better readability */
+    padding: 20px; /* Padding inside the container */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    position: relative; /* Ensures the content appears above the background overlay */
+    z-index: 2; /* Puts the content in front of the overlay */
+  }
+  
+  /* Header text styling */
+  .welcome-text {
+    color: #8B4513; /* Rich brown color */
+    font-size: 3rem; /* Large font size */
+    font-family: "Poppins", sans-serif; /* Elegant sans-serif font */
+    font-weight: 700; /* Bold font weight */
+    margin-bottom: 20px; /* Space between header and button */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Shadow for better visibility */
+  }
+  
+  /* Button styling */
+  .get-started-btn {
+    background-color: #8B4513; /* Brown button background */
+    color: #fff; /* White text */
+    font-size: 1.5rem; /* Slightly larger text */
+    font-family: "Poppins", sans-serif; /* Match header font */
+    font-weight: 600; /* Slightly bold */
+    padding: 15px 40px; /* Button padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s ease; /* Smooth hover effect */
+  }
+  
+  /* Button hover effect */
+  .get-started-btn:hover {
+    background-color: #6A2E1B; /* Darker brown on hover */
+    transform: scale(1.1); /* Slightly enlarge button on hover */
+  }
+  
