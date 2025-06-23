@@ -5,7 +5,7 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const { body, validationResult } = require('express-validator');
 
-const JWT_SECRET = "tinysecretkey";
+const JWT_SECRET = process.env.JWT_SECRET;
 
 // Create User route (signup)
 router.post('/createUser', [

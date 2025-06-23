@@ -4,12 +4,12 @@ const axios = require('axios');
 const router = express.Router();
 const Nutrition = require('../models/Nutrition');
 const fetchuser = require('../middleware/fetchuser');
-const SPOON_API_KEY = '64a6247bc7624c42a9532aa28781ac1d';
+const SPOON_API_KEY = process.env.SPOON_API_KEY; // Ensure you have this in your .env file
 const User = require('../models/User'); 
 
 //get nutrient information for a specific food item
 // Example endpoint: GET /nutrition/banana
-router.get('/:food', async (req, res) => {
+router.get('/:food', fetchuser, async (req, res) => {
   const foodItem = req.params.food;
   try {
     const response = await axios.get(

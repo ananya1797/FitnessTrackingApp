@@ -2,11 +2,13 @@ const connectToMongo = require('./db');
 const express = require('express'); 
 const cors = require('cors');
 const nutritionRoute = require('./routes/nutrition');
+require('dotenv').config(); // must come BEFORE using process.env
 
 const app = express();
 const port = 5000;
 
 app.use(cors());
+
 
 app.use(cors({ origin: 'http://localhost:3000' }));
 app.use(express.json());
@@ -19,6 +21,9 @@ app.get('/', (req, res) => {
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/fitness', require('./routes/dashboard'));
 app.use('/api/nutrition', nutritionRoute);
+app.use('/api/workouts', require('./routes/workouts'));
+app.use('/api/water', require('./routes/water'));
+app.use('/api/contact', require('./routes/contact'));
 
 
 // Connect to MongoDB first, then start server

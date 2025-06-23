@@ -1,9 +1,12 @@
 const mongoose = require('mongoose');
-
-const mongoURI = "mongodb://localhost:27017/FTA?readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false";
+require('dotenv').config();
+const mongoURI = process.env.MONGO_URI;
 
 const connectToMongo = () => {
-  return mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
-}
+  return mongoose.connect(mongoURI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  });
+};
 
 module.exports = connectToMongo;
