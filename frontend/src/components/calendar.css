@@ -1,0 +1,97 @@
+/* calendar-custom.css */
+.custom-calendar-wrapper {
+  background: url('./calender.jpeg') no-repeat center center;
+  background-size: cover;
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.react-calendar {
+  background: transparent;
+  border: none;
+  color: white;
+}
+
+.react-calendar__tile {
+  background: transparent !important;
+  color: white;
+  font-weight: 500;
+}
+
+.react-calendar__navigation {
+  display: none;
+}
+
+.react-calendar__month-view__weekdays {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+.custom-calendar-wrapper {
+  background: url('./calender.jpeg') no-repeat center center;
+  background-size: cover;
+  border-radius: 16px;
+  padding: 30px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Overlay behind calendar */
+.custom-calendar-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.45); /* Adjust for contrast */
+  z-index: 1;
+  border-radius: 16px;
+}
+
+/* Keep content above the overlay */
+.custom-calendar-wrapper > * {
+  position: relative;
+  z-index: 2;
+}
+.react-calendar__navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: white;
+}
+
+.react-calendar__navigation button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.react-calendar__navigation button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+/* Highlight workout days */
+.workout-day {
+  background-color: rgba(40, 167, 69, 0.3) !important;
+  border-radius: 50% !important;
+}
+
+/* Circle for today's date */
+.today-circle {
+  border: 2px solid #0d6efd;
+  border-radius: 50%;
+  font-weight: bold;
+  color: #0d6efd;
+}
