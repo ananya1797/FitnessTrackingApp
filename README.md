@@ -19,3 +19,4 @@ FitnessTrackingApp is a full-stack web application designed to help users track 
 - View and edit user dashboard
 - Contact form that submits messages to the backend
 - JWT authentication for protected routes
+- Integrated Fitzy, an AI chatbot powered by Google Gemini, for personalized fitness, nutrition, and motivation support.
