@@ -1,7 +1,6 @@
 # FitnessTrackingApp
 
-FitnessTrackingApp is a full-stack web application designed to help users track their fitness journey, including daily meals, calorie intake, workout routines, and personal goals. It is built using the MERN stack (MongoDB, Express.js, React, Node.js) and integrates external nutrition APIs.
-
+FitnessTrackingApp is a full-stack fitness tracker with features to log diet, workouts, and water intake. Integrated Fitzy, an AI chatbot powered by Google Gemini, to offer personalized fitness, nutrition, and motivation tips via a floating chat widget.
 ---
 
 ## Tech Stack
