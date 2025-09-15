@@ -1,0 +1,19 @@
+services:
+  backend:
+    build: ./backend
+    container_name: fitness-backend
+    ports:
+      - "5000:5000"
+    environment:
+      - MONGO_URI=mongodb+srv://ananyasrinivasrao:ananyatiny@cluster0.1dgi1oo.mongodb.net/FTA?retryWrites=true&w=majority&appName=Cluster0
+      - PORT=5000
+      - JWT_SECRET=tinysecretkey
+    depends_on:
+      - frontend
+
+  frontend:
+    build: ./frontend
+    container_name: fitness-frontend
+    ports:
+      - "3000:80"
+
